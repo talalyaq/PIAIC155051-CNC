@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chapter # 7 - Forms</h1>
+    <form action="">
+        <fieldset>
+            <legend>Your Details:</legend>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" name="" id="name">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="" id="email">
+            </p>
+        </fieldset>
+    </form>
+    <form action="">
+        <fieldset>
+            <legend>Your Review:</legend>
+            <p>How did you hear about us?
+                <select name="options" id="options_hear">
+                    <option value="Google">Google</option>
+                    <option value="Email">Email</option>
+                    <option value="SMS">SMS</option>
+                </select>
+            </p>
+            <p>Would you visit again?</p>
+            <p>
+                <input  name="visit" type="radio" value="Yes">Yes
+                <input  name="visit" type="radio" value="No">No
+                <input  name="visit" type="radio" value="Maybe">May Be
+            </p>
+            <p>Comment:</p>
+            <p>
+                <textarea name="comments" id="comments"  rows="4" cols="40"></textarea> 
+            </p>
+            <p>
+                <input type="checkbox" name="signup" id="chk_signup" value="signup">
+                Sign me up for email updates 
+            </p>
+            <p>
+                <input type="button" id="submit" value="submit">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
