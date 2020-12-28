@@ -1,0 +1,27 @@
+.carousel-item{
+    height: 17rem;
+    background-color: #777;
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .carousel-item h1{
+    color: rgb(255, 145, 0);
+  }
+  .carousel-indicators li {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(255, 145, 0);
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+  }
+
+  .contactus h4{
+    color: rgb(255, 145, 0);
+  }
+
+  
