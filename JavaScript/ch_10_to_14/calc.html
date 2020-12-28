@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1;
+        var num2;
+        var mOperator;
+        var result;
+        var err = false;
+        num1 = +prompt("Enter First Number: ");
+        num2 = +prompt("Enter Second Number: ");
+        mOperator = prompt("Enter Math Operator +, -, *, /, or %: ");
+        
+        if(mOperator === '+'){
+            result = num1 + num2;
+        }else if(mOperator === '-'){
+            result = num1 - num2;
+        }else if(mOperator === '*'){
+            result = num1 * num2;
+        }else if(mOperator === '/'){
+            result = num1 / num2;
+        }else if(mOperator === '%'){
+            result = num2 / 100 * num1;
+        }else{
+            err = true;
+        }
+
+        if(err === false){
+            alert(num1+' '+mOperator+' '+num2+' = '+result);
+        }else{
+            alert("Math Operator Input is Not Correct");
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Java-script assignments chapter 10 to 14</h1>
+    <div>
+        <h2>Make a Calculator</h2>
+        <br> 1. input a value from user <em>for example num1 is 7</em> 
+        <br> 2. input a second value from user <em>for example num2 is 3</em> 
+        <br> 3. input a third value from user <em>for example sign is "+" or "-" or "*" or "/" or "%"</em>
+        <br> 4. print operation in alert() <em> 7-3 =4, or 7*3 =21, or 7/3 =2.3, or 7+3 =10 or 7%3 =1</em> 
+    </div>
+   
+</body>
+</html>

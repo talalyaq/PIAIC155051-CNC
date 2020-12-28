@@ -3,7 +3,7 @@ Java-script assignments chapter 10 to 14
 
 #### Make a Calculator
 1. input a value from user ```for example num1 is 7```
-1. input a second value from user ```for example num2 is 3```
+2. input a second value from user ```for example num2 is 3```
 3. input a third value from user ```for example sign is "+" or "-" or "*" or "/" or "%"```
 4. print operation in alert() ```7-3 =4, or 7*3 =21, or 7/3 =2.3, or 7+3 =10 or 7%3 =1``` 
 
