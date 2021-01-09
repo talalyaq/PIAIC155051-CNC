@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var courses=[];
+        var course1 =prompt("course 1", "computer");
+        var course2 ="python";
+        var course3 ="java";
+        var course4 ="docker";
+        var course5 ="html";
+        courses.push(course1);
+        courses.push(course2);
+        courses.push(course3);
+        courses.push(course4);
+        courses.push(course5);
+        alert(courses);
+
+        course1 = prompt(course1, courses[0]);
+        if(courses[0] != course1){
+            courses.splice(0,1,course1)
+        }
+
+        course2 = prompt(course2, courses[1]);
+        if(courses[1] != course2){
+            courses.splice(1,1,course2)
+        }
+        
+        course3 = prompt(course3, courses[2]);
+        if(courses[2] != course3){
+            courses.splice(2,1,course3)
+        }
+        
+        course4 = prompt(course4, courses[3]);
+        if(courses[3] != course4){
+            courses.splice(3,1,course4)
+        }
+
+        course5 = prompt(course5, courses[4]);
+        if(courses[4] != course5){
+            courses.splice(4,1,course5)
+        }
+        
+        alert(courses);
+    </script>
+</head>
+<body>
+    <h1>Java-script assignments chapter 15 16 17</h1>
+    <div>
+        <br> 1. Create an empty array with the name is courses. <em>example: var courses=[] </em> 
+        <br> 2. Get the 5-course name from the user, <em>example: var course1 =prompt("course 1", "computer")</em>and save all 5 value in "courses" array.<em>example: courses.push(course1) </em> 
+        <br> 3. print courses array in alert <em>example: alert(courses)</em>
+        <br> 4. print all full 5-course name one by one in prompt. <em>example: course1=prompt(course1, course1Value)</em>
+        <br> 5. If the user edit any value (through prompt), then that value is edit in the array.  <em>example: course1=prompt(course1, course1ValueEdit)</em>
+        <em>use Array.splice() to replace and edit index in array</em>
+        <br> 6. print courses array in alert <em>example: alert(courses)</em>
+    </div>
+
+</body>
+</html>
