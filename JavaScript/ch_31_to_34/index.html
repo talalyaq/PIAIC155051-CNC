@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var fullName = prompt("Enter Your Name");
+    var dayDOB = +prompt("Enter Day of DOB", 1);
+    var monDOB = +prompt("Enter Month of DOB", 1);
+    var yearDOB = +prompt("Enter Year of DOB", 1999);
+    var yourDOB = new Date();
+    const currYear = new Date();
+    yourDOB.setDate(dayDOB);
+    yourDOB.setMonth(monDOB-1);
+    yourDOB.setFullYear(yearDOB);
+    yourDOB.setHours(0);
+    yourDOB.setMinutes(0);
+    yourDOB.setSeconds(0);
+    yourDOB.setMilliseconds(0);
+    console.log("Hello "+fullName+" , your DOB: "+yourDOB);
+    
+    var ageYear = currYear.getFullYear() - yourDOB.getFullYear();
+    var ageMonth = currYear.getMonth() - yourDOB.getMonth();
+    var ageDay = currYear.getDate() - yourDOB.getDate();
+    
+    if(currYear.getMonth() < yourDOB.getMonth()){
+        //Reduce Year by 1 and increase Months by 12 if the DOB month still not arrived in curr year
+        ageMonth += 12;
+        ageYear -= 1;
+        
+    }
+    if(currYear.getDate() < yourDOB.getDate()){
+        //Calculation of correct number of Days considering Days in Current month
+        calcYear = new Date(currYear.getMonth()+1);
+        calcYear.setDate(0);
+        ageDay += calcYear.getDate();    
+        ageMonth -= 1;
+    }
+    console.log("Your age is: "+ageYear+" Years, "+ageMonth+" Months and "+ageDay+" Days");
+    
+    //Age in Days
+    var ageInDays = (currYear-yourDOB)/1000/60/60/24;
+    console.log("You age in Days: " +Math.round(ageInDays,0)+" Days");
+    
+    //Next DOB Time Left Calc
+    var nextDOB = new Date(yourDOB.setFullYear(currYear.getFullYear()));
+    if((nextDOB - currYear)/1000/60/60/24 < 1){
+        nextDOB = nextDOB.setFullYear(currYear.getFullYear()+1);
+    }
+    var timeLeftDays = Math.floor((nextDOB-currYear)/1000/60/60/24);
+    var timeLeftHrs = Math.floor(((nextDOB-currYear)/1000/60/60/24 - timeLeftDays)*24);
+    var timeLeftMins = Math.floor(((nextDOB-currYear)/1000/60/60- timeLeftDays*24 - timeLeftHrs)*60);
+    var timeLeftSecs = Math.floor(((nextDOB-currYear)/1000/60- timeLeftDays*24*60 - timeLeftHrs*60 - timeLeftMins)*60);
+    
+    if(yourDOB.getMonth() === currYear.getMonth() && yourDOB.getDate() === currYear.getDate()){
+        console.log("Happy for You, still alive!!! do better in Next Year");
+    }else{
+        console.log("BD is in: "+timeLeftDays+" days, "+timeLeftHrs+" Hrs and "+timeLeftMins+" mins and "+timeLeftSecs+" secs");
+    }
+    
+</script>
+</html>
