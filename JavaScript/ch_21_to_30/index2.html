@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS chapter 21 to 30/ Second Assignment</h1>
+    <div>
+        <br> 1. input value from user in String <em>var inputValue="cloUd naTive computinG"</em>.
+        <br> 2. Convert every first letter of the content in Capitalize case. <em>inputValue="Cloud Native Computing"</em>.
+        <br> 3. print value in console.log()<em> console.log(inputValue) | check result in browser console</em>.
+    </div>
+</body>
+<script>
+    var inputText = prompt('Write a Text Here', "clouD naTive ComPuting");
+    inputText = inputText.toLowerCase();
+    var textLen = inputText.length;
+    var outputText = "";
+    var tempChar = "";
+    var lastChar = "";
+    for(var i=0; i<=textLen; i++){
+        tempChar = inputText.slice(i,i+1);
+        if(!lastChar || lastChar == " "){
+            outputText += tempChar.toUpperCase();
+        }else{
+            outputText += tempChar;
+        }
+        lastChar = tempChar;
+    }
+    alert("Check Resutl in Console Log as well: "+outputText+", =>Text Lenght: "+ textLen);
+    console.log(outputText);
+</script>
+</html>

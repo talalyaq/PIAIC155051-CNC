@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS chapter 21 to 30/ First Assignment</h1>
+    <div>
+        <br> 1. Take a input from user in number with decimal point <em>user input is 3.4</em>.
+        <br> 2. Convert it into greater number <em>Example: Math.ceil(3.4); to 4</em>.
+        <br> 3. Declear a variable of string and assign some text <em> var text="This is my dummy text"</em>.
+        <br> 4. Slice the text into a new variable from 0 to the rounded number <em>`0 to 4;  Example: text.slice(0, 4)</em> | <em> sliceText = This</em>.
+        <br> 5. Use for loop and concatination to reverse the sliced string; <em>0==>4 ==> This ===> sihT</em>.
+        <br> 6. print value in alert <em>"sihT"</em>.
+    </div>
+</body>
+<script>
+    var decNum = +prompt('Write a Decimal Number', 0.0);
+    
+    if(!isNaN(decNum)){
+        var decCeil = Math.ceil(decNum);
+        alert("The Number: "+ decNum +" and Ceiling: "+ decCeil);
+        var textDummy = "This is Dummy Text";
+        var partText = textDummy.slice(0,decCeil);
+        alert(partText);
+        var reverseText = "";
+        for(var i=decCeil; i>0; i--){
+            reverseText += textDummy.slice(i-1,i);
+        }
+        alert("revesed String: " + reverseText)
+    }else{
+        alert("Input  Numbers Only");
+    }
+</script>
+</html>
